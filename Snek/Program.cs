@@ -17,20 +17,20 @@ int score = 0;
 
 while (true)
 {
-    Console.WriteLine("Score: " + score + "\n");
+    Console.WriteLine("");
 
+    Console.Clear();
+    Console.WriteLine("Score: " + score + "\n");
     snakeHeadPos.ApplyMovementDirection(movementDirection);
 
     for (int y = 0; y < gridDimensions.Y; y++)
     {
-
         for (int x = 0; x < gridDimensions.X; x++)
         {
             Coord currentCoord = new Coord(x, y);
 
             if (snakeHeadPos.Equals(currentCoord))
             {
-
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.Write("■");
                 Console.ForegroundColor = ConsoleColor.White;
@@ -56,7 +56,6 @@ while (true)
                 Console.Write(" ");
             }
         }
-
         Console.WriteLine();
     }
 
@@ -123,7 +122,5 @@ while (true)
             }
         }
     }
-    Console.Clear();
-
 }
 
